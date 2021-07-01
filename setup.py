@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="example-pkg-sicaptcha",
-    version="0.0.3",
+    version="0.0.4",
     author="siteisleri.com",
     author_email="noreply@siteisleri.com",
     description="Python basic captcha module",
@@ -20,7 +20,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=["Pillow","uuid","random"],
+    install_requires=["Pillow","uuid"],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
