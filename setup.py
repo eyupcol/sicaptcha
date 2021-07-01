@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="sicaptcha",
-    version="0.0.5",
+    version="0.0.6",
     author="siteisleri.com",
     author_email="noreply@siteisleri.com",
     description="Python basic captcha module",
