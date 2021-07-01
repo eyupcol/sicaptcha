@@ -1,6 +1,6 @@
 # Python captcha module (Django/Flask)
 
-example: [Siteisleri Captcha](http://www.siteisleri.com)
+example: [Siteisleri.com](http://www.siteisleri.com)
 
 ## Install
 ```
