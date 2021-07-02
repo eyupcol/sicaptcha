@@ -10,14 +10,14 @@ class Sicaptcha:
     bgcolor = (255, 255, 255, 255)
     textcolor = (0, 0, 0, 250)
     linecolor = (0, 0, 0, 90)
-    font = ""
+    font = ''
     fontSize = 48
     format = 'base64' #options: base64|image|buffer
     imagepath = 'captcha.webp'
     text = ''
 
     def get_captcha(self):
-        if not os.path.isfile(self.font) or self.font == "":
+        if not os.path.isfile(self.font) or self.font == '':
             textFont = ImageFont.load_default()
         else:
             textFont = ImageFont.truetype(self.font, self.fontSize)
@@ -37,13 +37,15 @@ class Sicaptcha:
             for y in range(step, h, step):
                 draw.point((x, y), fill=self.textcolor)
 
-        uidStr = str(uuid.uuid4()).split('-')
+        if self.text == '':
+            uidStr = str(uuid.uuid4()).split('-')
+            self.text = uidStr[1]
 
-        draw1 = ImageDraw.Draw(background)
-        textwidth, textheight = draw1.textsize(uidStr[1], textFont)
+        drawText = ImageDraw.Draw(background)
+        textwidth, textheight = drawText.textsize(self.text, textFont)
         tx = (180 - textwidth) / 2
         ty = (60 - textheight) / 2
-        draw1.text((int(tx), int(ty)), uidStr[1], font=textFont, fill=self.textcolor)
+        drawText.text((int(tx), int(ty)), self.text, font=textFont, fill=self.textcolor)
 
         if self.format == 'base64':
             buffered = BytesIO()
