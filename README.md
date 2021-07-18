@@ -3,6 +3,9 @@
 
 examples: [Siteisleri.com](http://www.siteisleri.com)
 
+![An example captcha image]
+(https://raw.githubusercontent.com/siteisleri/sicaptcha/master/example.webp)
+
 ## Install
 ```
 pip install sicaptcha
@@ -32,6 +35,7 @@ captcha.fontSize = 48
 captcha.imagepath = 'captcha.webp'
 captcha.text = '' # text to be used for confirmation
 ```
+
 
 ## Usage in Django
 ```
