@@ -1,8 +1,6 @@
 # Python captcha module (Django/Flask)
 
 
-examples: [Siteisleri.com](http://www.siteisleri.com)
-
 ![An example captcha image](https://raw.githubusercontent.com/siteisleri/sicaptcha/master/example.webp)
 
 ## Install
